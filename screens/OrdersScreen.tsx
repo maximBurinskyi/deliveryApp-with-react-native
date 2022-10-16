@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, ActivityIndicator } from 'react-native';
 import React, { useLayoutEffect, useState } from 'react';
 import {
   CompositeNavigationProp,
@@ -44,12 +44,13 @@ const OrdersScreen = () => {
       <Image
         source={{ uri: 'https://links.papareact.com/m51' }}
         containerStyle={tw('w-full h-64')}
+        PlaceholderContent={<ActivityIndicator />}
       />
 
       <View>
         <Button
           color="pink"
-          //titleStyle={{color: 'gray', font-weight: 400}}
+          //titleStyle={{color: 'gray', font-weight: '400'}}
           style={tw('py-2 px-5')}
           onPress={() => setAscending(!ascending)}
         >
